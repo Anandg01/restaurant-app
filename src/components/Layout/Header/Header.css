@@ -13,7 +13,7 @@
 }
 .mealsImage{
     width: 100%;
-    position: fixed;
+    overflow: hidden;
 }
 .mealsImage img{
     width: 100%;
