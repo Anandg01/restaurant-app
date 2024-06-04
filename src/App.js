@@ -3,6 +3,9 @@ import Header from "./components/Layout/Header/Header";
 import MealsSummary from "./components/Meals/MealsSummary";
 import MealsItems from "./components/Meals/MealsItems";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
+
+
 function App() {
   const [cartShow,setCartShow]=useState(false)
 
@@ -14,12 +17,12 @@ function App() {
   }
 
   return (
-    <div>
+    <CartProvider>
       <Header openCartHandler={showCartHandler} />
       {cartShow&&<Cart closeButtonHandeler={hideCartHandler}/>}
       <MealsSummary />
       <MealsItems />
-    </div>
+    </CartProvider>
   );
 }
 
