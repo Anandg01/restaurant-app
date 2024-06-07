@@ -42,3 +42,36 @@
   background-color: #8a2b06;
   color: white;
 }
+
+.tabel_container{
+  width: 100%;
+}
+.tabel_container tr:hover{
+   background-color: #ddd;
+}
+
+.tabel_container td,
+.tabel_container th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tabel_container th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#d11c79
+}
+.tabel_container td button{
+  width: 30%;
+  margin-left: 5px;
+  font-weight: 600;
+  
+}
+
+.tabel_container td button:hover {
+ 
+  background-color: #8a2b06;
+  color: white;
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ items:[],
 totalAmount:0,
 addItem:(item)=>{},
 removeItem:(id)=>{},
-message:''
+updateItem:(id)=>{}
 })
 
 export default CartContext;

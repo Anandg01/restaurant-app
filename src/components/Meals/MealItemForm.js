@@ -5,13 +5,12 @@ import cartContext from "../../store/cartContext";
 
 const MealItemForm = (props) => {
   const cartCtx = useContext(cartContext)
-  console.log(cartCtx)
 
   const addCartItem = (event) => {
     event.preventDefault();
-    const quantity=document.getElementById(`amount_${props.id}`).value;
-    cartCtx.addItem({...props.item,amount:quantity})
-    console.log(event.target)
+    const quantity = document.getElementById(`amount_${props.id}`).value;
+    if(quantity<1)return;
+    cartCtx.addItem({ ...props.item, amount: Number(quantity) })
   }
 
 
@@ -30,7 +29,6 @@ const MealItemForm = (props) => {
       />
       <button onClick={addCartItem} >+</button>
     </form>
-    <p>{cartCtx.message}</p>
   </>
 }
 
